@@ -1,13 +1,11 @@
+cmake_minimum_required(VERSION 3.12) # version can be different
 
-cmake_minimum_required(VERSION 3.7)
+project(cpu6502) #name of your project
 
-project( 6502 )
+add_subdirectory(googletest) # add googletest subdirectory
 
-# Turn on the ability to create folders to organize projects (.vcproj)
-# It creates "CMakePredefinedTargets" folder by default and adds CMake
-# defined projects like INSTALL.vcproj and ZERO_CHECK.vcproj
-set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+include_directories(googletest/include) # this is so we can #include <gtest/gtest.h>
 
-# Sub-directories where more CMakeLists.txt exist
-add_subdirectory(6502/6502Test)
-add_subdirectory(6502/6502Lib)
+add_executable(test_main src/test_main.cpp) # add this executable
+
+target_link_libraries(test_main PRIVATE gtest) # link google test to this executable

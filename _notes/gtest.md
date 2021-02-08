@@ -10,7 +10,9 @@ https://stackoverflow.com/questions/62910867/how-to-run-tests-and-debug-google-t
 https://github.com/abseil/googletest.git
 ```
 add googletest to .gitmodules
-
+```
+git submodule add <url> googletest
+```
 
 2. CMakeLists.txt
 ```
@@ -35,4 +37,12 @@ add googletest to .gitmodules
       ├─ CMakeLists.txt
       ├─ myfunctions.h
       └─ mytests.cpp
+```
+
+4. Run
+```
+  cd build
+  cmake ..
+  make 
+  ./mytests
 ```

@@ -3,15 +3,16 @@
 //
 #include "main_6502.h"
 
-calss M6502Test1 : public testing::Test
+class M6502Test1 : public testing::Test
 {
 public:
   Mem mem;
-  CPU cpu virtual void Setup()
+  CPU cpu;
+  virtual Setup()
   {
-    sup.Reset(mem);
+    cpu.Reset(mem);
   }
-  virtual void TearDown()
+  virtual TearDown()
   {
   }
 }
