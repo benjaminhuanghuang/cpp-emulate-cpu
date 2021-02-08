@@ -2,7 +2,7 @@
 
 CXX       = gcc
 EXEBIN    = cpu.exe
-SOURCES   = main.cpp #p2funargs.cpp #data-type.cpp #arithmatic.cpp
+SOURCES   = main.cpp
 FLAGS     = -std=c++11 -Wall
 
 all: $(EXEBIN)
